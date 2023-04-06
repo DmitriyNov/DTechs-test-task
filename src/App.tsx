@@ -1,24 +1,23 @@
-import * as React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Userform from './components/Form';
+import AppModal from './components/Modal';
+import Card from './components/Card'
 
 function App() {
   return (
+    // хэддер не стал отдельным компонентом делать, на ReactBootstrap тоже кстати не нашёл ничего с этим связанного
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Test task for Dtechs
+        <AppModal />
       </header>
+      <main className="App-content">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </main>
     </div>
   );
 }
