@@ -1,25 +1,33 @@
 import './App.css';
-import Userform from './components/Form';
-import AppModal from './components/Modal';
-import Card from './components/Card'
+import UserForm from './components/Form';
+import Card from './components/Card';
 
-function App() {
+interface WorkBorders {
+  id: string;
+  name: string;
+}
+
+export interface User {
+  userName: string;
+  password: string;
+  firstName: string;
+  latsName: string;
+  roles: string[];
+  workBorders: WorkBorders[];
+}
+
+export const userList: User[] = [];
+
+export default function App() {
   return (
     // хэддер не стал отдельным компонентом делать, на ReactBootstrap тоже кстати не нашёл ничего с этим связанного
     <div className="App">
       <header className="App-header">
         Test task for Dtechs
-        <AppModal />
+        <UserForm />
       </header>
       <main className="App-content">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
       </main>
     </div>
   );
 }
-
-export default App;
